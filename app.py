@@ -2,7 +2,9 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np #1.19.2
-
+#scipy>=0.19.1
+#joblib>=0.11
+#scikit-learn-0.23.2
 # Load the Random Forest CLassifier model
 filename = 'First-innings-score.pk1'
 regressor = pickle.load(open(filename, 'rb'))
@@ -68,7 +70,7 @@ def predict():
         data = np.array([temp_array])
         my_prediction = int(regressor.predict(data)[0])
               
-        return render_template('result.html', lower_limit = my_prediction-10, upper_limit = my_prediction+5)
+        return render_template('result.html',namee=batting_team, lower_limit = my_prediction-10, upper_limit = my_prediction+5)
 
 
 
