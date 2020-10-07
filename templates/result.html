@@ -1,12 +1,172 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>OUR PREDICTION</title>
+	<title></title>
 	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		.container { 
+            width:100%; 
+            height:600px; 
+            
+             
+            margin: 0px;
+        } 
+        #st-box { 
+            float:left; 
+            width:300px; 
+            height:500px;
+            margin-left: 12px; 
+            margin-top: 100px;
+            background-color:white; 
+       
+            
+            border-radius: 8px;
+        } 
+        #nd-box { 
+            float:left; 
+            width:640px; 
+            height:160px; 
+            background-color:white;  
+             
+            padding-left: 30px;
+             
+        } 
+        #rd-box { 
+            float:right; 
+            width:300px; 
+            height:500px;
+             margin-right: 12px;
+            margin-top: 100px;
+            background-color:white; 
+            
+            border-radius: 8px;
+        } </style>
+	
 </head>
+
+
 <body>
-<div class="results" align="center" style="padding: 100px">
-				<p class='result-p' style="font-family: 'Satisfy', cursive;font-size: 60px">The final predicted score of {{namee}} can (range):<br> {{ lower_limit }} to {{ upper_limit }}</p>
-			</div>
+		
+
+	<center>  
+        
+          
+        <div class="container"> 
+        	<br><br>
+        	{% if namee=="Chennai Super Kings" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/csk2.jpg" style="width: 305px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Delhi Daredevils" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/dd.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Kings XI Punjab" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/kxip.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Kolkata Knight Riders" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/kkr.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Mumbai Indians" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/mi1.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Rajasthan Royals" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/rr.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Royal Challengers Bangalore" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/rcb1.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if namee=="Sunrisers Hyderabad" %}
+            <div id="st-box" > 
+            	<img src="/static/assets/img/srh.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+
+
+
+            <div id="nd-box"> <br>
+                <p class='result-p' style="font-family: 'Satisfy', cursive;font-size: 60px">The final predicted score of {{namee}} can (range):<br> {{ lower_limit }} to {{ upper_limit }}</p>
+            </div> 
+              
+            {% if nameee=="Chennai Super Kings" %}
+
+            <div id="rd-box"> 
+                
+                <img src= 
+"/static/assets/img/csk1.jpg  
+                "style="width:280px; height:400px;">
+
+                {%endif%}
+             {% if nameee=="Delhi Daredevils" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/dd2.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if nameee=="Kings XI Punjab" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/kxip2.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if nameee=="Kolkata Knight Riders" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/kkr.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if nameee=="Mumbai Indians" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/mi.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if nameee=="Rajasthan Royals" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/rr1.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if nameee=="Royal Challengers Bangalore" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/rcb2.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%}
+             {% if nameee=="Sunrisers Hyderabad" %}
+            <div id="rd-box" > 
+            	<img src="/static/assets/img/srh.jpg" style="width: 280px;height: 400px;border-radius: 8px" >
+                 
+            </div> 
+             {%endif%} 
+            </div> 
+        </div> 
+        </center> 
+
 </body>
 </html>
