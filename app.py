@@ -70,7 +70,7 @@ def predict():
         data = np.array([temp_array])
         my_prediction = int(regressor.predict(data)[0])
               
-        return render_template('result.html',namee=batting_team, lower_limit = my_prediction-10, upper_limit = my_prediction+5)
+        return render_template('result.html',namee=batting_team,nameee=bowling_team, lower_limit = my_prediction-10, upper_limit = my_prediction+5)
 
 
 
