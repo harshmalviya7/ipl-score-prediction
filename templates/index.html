@@ -2,13 +2,86 @@
 <html>
 <head>
     <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style >
+        body{
+            background-image: url(./static/assets/img/gettyimages-180868820-2048x2048.jpg);
+            margin: 0px;
+            padding: 0px;
+        }
+
+        input[type=text] {
+  width: 210px;
+  padding: 14px 5px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+.a{width: 210px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 4px;
+  text-align: center;
+  margin-right: 150px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button5 {
+  background-color: #e1ecec;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.a:focus{
+    border: 3px solid #555;
+}
+#dem{
+         color: rgb(254, 209, 54); font-family: 'Pacifico', cursive;font-size: 60px;
+       }
+    </style>
 </head>
 <body>
-    <div class='div2' align="center" style="padding: 100px">
+    <p id="dem" align="right" style="margin-right: 100px">Cricket Score<br> Predictions</p>
+    <div class='div2' align="right" style="padding: 20px;margin-right: 60px">
+        
+        
+
+       
                 <form action="{{ url_for('predict') }}" method="POST">
                     <!-- Batting Team Dropdown -->
-                    <select class="form-input align-center" name="batting-team">
-                        <option value="none">--- Select a Batting team ---</option>
+                    <div>
+                    <select class="a" name="batting-team">
+                        <option value="none">Select a Batting team </option>
                         <option value="Mumbai Indians">Mumbai Indians</option>
                         <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                         <option value="Chennai Super Kings">Chennai Super Kings</option>
@@ -17,10 +90,10 @@
                         <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
                         <option value="Delhi Daredevils">Delhi Daredevils</option>
                         <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
-                    </select><br><br>
+                    </select>
                     <!-- Bowling Team Dropdown -->
-                    <select class="form-input align-center" name="bowling-team">
-                        <option value="none">--- Select a Bowling team ---</option>
+                    <select  name="bowling-team" class="a">
+                        <option value="none">Select a Bowling team </option>
                         <option value="Mumbai Indians">Mumbai Indians</option>
                         <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
                         <option value="Chennai Super Kings">Chennai Super Kings</option>
@@ -29,16 +102,22 @@
                         <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
                         <option value="Delhi Daredevils">Delhi Daredevils</option>
                         <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
-                    </select><br><br>
-                    <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2"><br><br>
-                    <input class="form-input" type="text" name="runs" placeholder="Runs eg. 64"><br><br>
-                    <input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4"><br><br>
-                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42"><br><br>
-                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3"><br><br>
+                    </select></div>
+                <div >
+                    <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2">
+                    <input class="form-input" type="text" name="runs" placeholder="Runs eg. 64">
+                </div>
+                <div >    <input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4"></div>
+                <div>
+                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42">
+                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3"></div><br><br>
 
-            <input type="submit" class="myButton" value="Predict Score">
+            <input type="submit" class="button button5" value="Predict Score">
+            
             </form>
             </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <iframe src="https://bwidget.crictimes.org/" style="width:100%;min-height: 250px;" frameborder="0" scrolling="yes"></iframe>
 
 </body>
 </html>
